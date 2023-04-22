@@ -1,5 +1,24 @@
+- defaults:
+    link:
+        force: true
+        relink: true
+    clean:
+        recursive: true
 
+- clean: ['~/.config', '/etc/nixos']
 
 - link:
+    /etc/nixos/: 
+        glob: true
+        path: nix/**
+    ~/.config/fish/: 
+        glob: true
+        path: fish/**
+    ~/.config/dolphinrc: .dolphinrc
+    ~/.config/neofetch/config.conf: .neofetch
+    ~/.config/sublime-text/Packages/User/: 
+        glob: true
+        path: sublime/**
 
-
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]

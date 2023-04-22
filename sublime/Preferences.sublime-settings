@@ -1,0 +1,10 @@
+{
+  "theme": "Default Dark.sublime-theme",
+  "color_scheme": "Mariana.sublime-color-scheme",
+  "ignored_packages":
+    [
+      "Vintage",
+  ],
+  "tab_size": 2,
+  "translate_tabs_to_spaces": true,
+}
