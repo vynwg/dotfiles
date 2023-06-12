@@ -1,8 +1,8 @@
 # This file contains fish universal variable definitions.
 # VERSION: 3.0
 SETUVAR --export EDITOR:nvim
-SETUVAR --export SSH_AGENT_PID:503491
-SETUVAR --export SSH_AUTH_SOCK:/tmp/ssh\x2dXXXXXXDYvFeF/agent\x2e503490
+SETUVAR --export SSH_AGENT_PID:2137
+SETUVAR --export SSH_AUTH_SOCK:/tmp/ssh\x2dXXXXXXKWY3o0/agent\x2e2136
 SETUVAR __fish_initialized:3400
 SETUVAR fish_color_autosuggestion:555\x1ebrblack
 SETUVAR fish_color_cancel:\x2dr
@@ -32,4 +32,4 @@ SETUVAR fish_pager_color_description:B3A06D\x1eyellow\x1e\x2di
 SETUVAR fish_pager_color_prefix:cyan\x1e\x2d\x2dbold\x1e\x2d\x2dunderline
 SETUVAR fish_pager_color_progress:brwhite\x1e\x2d\x2dbackground\x3dcyan
 SETUVAR fish_pager_color_selected_background:\x2dr
-SETUVAR --export once_in_a_lifetime:true
+SETUVAR --export once_in_a_lifetime:\x1d

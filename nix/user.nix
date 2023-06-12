@@ -23,7 +23,9 @@
     description = "Vynwg";
     shell = pkgs.fish;
     extraGroups = [ "audio" "networkmanager" "wheel" ];
-    packages = with pkgs; [
+    packages = [
+      (import ./packages/rustdesk-nightly)
+    ] ++ (with pkgs; [
       alacritty
       direnv
       discord
@@ -38,14 +40,15 @@
       p7zip
       prismlauncher
       python39
-      rustdesk
-      shutter
+      revolt-desktop
+      # rustdesk
+      # shutter
       spotify
       sublime4
       vlc
       zerotierone
       warzone2100
-    ];
+    ]);
   };
 
   programs.git.enable = true;

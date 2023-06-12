@@ -1,4 +1,4 @@
-{ boot, programs, config, pkgs, ... }:
+{ lib, boot, programs, config, pkgs, ... }:
 {
   imports =
     [
