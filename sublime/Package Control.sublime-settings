@@ -5,10 +5,12 @@
 	],
 	"installed_packages":
 	[
+		"Deviot (Arduino IDE)",
 		"Discord Rich Presence",
 		"fish",
 		"Nix",
 		"Package Control",
 		"TOML",
+		"WGSL",
 	],
 }
