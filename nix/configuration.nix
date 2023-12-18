@@ -9,13 +9,12 @@
 
   nixpkgs.overlays = [
     ( import ./overlays/chrome.nix )
-    ( import ./overlays/ciscoPacketTracer8.nix )
   ];
 
   nixpkgs.config.permittedInsecurePackages = [
   #  "electron-21.4.0"
     "openssl-1.1.1w"
-    "python-2.7.18.6"
+    "python-2.7.18.7"
   ];
 
   # Firmware
@@ -56,7 +55,7 @@
 
   # Network configuration
   networking.hostName = "nixos";
-  networking.wireless.enable = true;
+  # networking.wireless.enable = true;
   networking.wireless.userControlled.enable = true;
   networking.networkmanager.enable = true;
   systemd.services.NetworkManager-wait-online.enable = false;
@@ -117,5 +116,5 @@
     pulse.enable = true;
   };
 
-  system.stateVersion = "23.05";
+  system.stateVersion = "23.11";
 }

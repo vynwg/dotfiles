@@ -9,7 +9,7 @@
 
     serviceConfig = {
       Type = "simple";
-      ExecStart = "${(import ./packages/rustdesk-nightly)}/bin/rustdesk --service";
+      ExecStart = "${pkgs.rustdesk}/bin/rustdesk --service";
       KillMode = "mixed";
       TimeoutStopSec = 30;
       User = "vynwg";

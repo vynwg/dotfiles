@@ -1,10 +1,5 @@
 { environment, programs, pkgs, ... }:
-let 
-  nixos2205 = import (builtins.fetchTarball {
-    name = "nixos-2023-05-31";
-    url = "https://github.com/nixos/nixpkgs/archive/466c2e342a6887507fb5e58d8d29350a0c4b7488.tar.gz";
-    sha256 = "0f3pc6rva386ywzh7dig5cppfw5y6kqc6krm5ksl012x3s61bzim";
-  }) { config.allowUnfree =  true; };
+let
   unstable = import <unstable> {};
 in
 {
@@ -32,10 +27,8 @@ in
     isNormalUser = true;
     description = "Vynwg";
     shell = pkgs.fish;
-    extraGroups = [ "audio" "networkmanager" "wheel" "scanner" "lp" ];
-    packages = [
-      (import ./packages/rustdesk-nightly)
-    ] ++ (with pkgs; [
+    extraGroups = [ "audio" "networkmanager" "wheel" "scanner" "lp" "dialout" ];
+    packages = (with pkgs; [
       alacritty
       android-tools
       bottom
@@ -43,8 +36,8 @@ in
       droidcam
       easyeffects
       flameshot
-      flitter
       freecad
+      gamemode
       google-chrome
       gsmartcontrol
       handbrake
@@ -53,7 +46,6 @@ in
       libreoffice
       libsForQt5.ktorrent
       neofetch
-      nextcloud-client
       obs-studio
       p7zip
       platformio
@@ -61,17 +53,13 @@ in
       python2
       python310
       python310Packages.pip
+      rustdesk
       scrcpy
       spotify
-      stellarium
       sublime4
-      ttdl
-      urn-timer
       vlc
       xorg.libXcursor
       zerotierone
-    ]) ++ (with nixos2205; [
-      ciscoPacketTracer8
     ]) ++ (with unstable; [
       vesktop
       typst
@@ -84,8 +72,6 @@ in
   programs.dconf.enable = true;
   programs.steam.enable = true;
   programs.neovim.enable = true;
-
-  virtualisation.virtualbox.host.enable = true;
 
   services.lorri.enable = true;
   services.zerotierone.enable = true;
